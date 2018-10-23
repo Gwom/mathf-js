@@ -317,9 +317,7 @@ class Mathf {
    * @returns {number}
    */
   static repeat(t, length) {
-    if (t > 0) return t % length;
-
-    return length + (t % length);
+     return t - Math.floor(t / length) * length;
   }
 
   /**
